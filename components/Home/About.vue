@@ -21,7 +21,7 @@
                         "
                     ></div>
                     <div class="about-two_image">
-                        <img src="images/resource/about-2.jpg" alt="" />
+                        <img src="./../../public/images/resource/about-2.jpg" alt="" />
                         <!-- About One Detail -->
                         <a
                             class="about-two_play lightbox-video fa-solid fa-play fa-fw"
@@ -96,6 +96,7 @@
                                 href="#"
                             >
                                 <div class="btn-wrap">
+                                <nuxt-link to="/contact">
                                     <span class="text-one"
                                         >Contact Us
                                         <i
@@ -108,6 +109,7 @@
                                             class="fa-solid fa-arrow-right fa-fw"
                                         ></i
                                     ></span>
+                                </nuxt-link>
                                 </div>
                             </a>
 

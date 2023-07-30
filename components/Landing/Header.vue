@@ -21,6 +21,19 @@ const route = {
         name: "Home",
     },
 };
+
+import jsonData from "./../../public/services.json";
+const services = jsonData.services;
+
+const servicesHeader=[];
+services.forEach(element => {
+    servicesHeader.push(element.name);
+});
+
+const formatService=(service)=>{
+    return "jobs/"+service
+}
+
 </script>
 
 <template lang="">
@@ -97,7 +110,7 @@ const route = {
                     <div class="logo">
                         <nuxt-link :to="route.home.url">
                             <img
-                                src="~/assets/images/logo-3.png"
+                                src="./../../public/images/logo-3.png"
                                 alt=""
                                 title=""
                             />
@@ -137,27 +150,21 @@ const route = {
                                                 route.home.name
                                             }}</nuxt-link>
                                         </li>
-                                        <li>
-											
-                                            <a href="about.html">About Us</a>
-                                        </li>
+                                   
                                         <li class="dropdown">
                                             <a href="#">Services</a>
-                                            <ul>
-                                                <li>
-                                                    <a href="services.html"
-                                                        >Services</a
-                                                    >
+                                            <ul >
+
+                                                <li v-for="service in  servicesHeader">
+                                                    <nuxt-link :to="formatService(service)">
+                                                        {{ service }}
+                                                    </nuxt-link>
+                                        
                                                 </li>
-                                                <li>
-                                                    <a
-                                                        href="service-detail.html"
-                                                        >Service Detail</a
-                                                    >
-                                                </li>
+                                               
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
+                                       <!--  <li class="dropdown">
                                             <a href="#">Project</a>
                                             <ul>
                                                 <li>
@@ -192,9 +199,9 @@ const route = {
                                                     >
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <nuxt-link to="/contact">Contact</nuxt-link>
                                         </li>
                                     </ul>
                                 </div>
@@ -253,18 +260,21 @@ const route = {
                                         href="#"
                                     >
                                         <div class="btn-wrap">
-                                            <span class="text-one"
-                                                >Get a quote now
-                                                <i
-                                                    class="fa-solid fa-arrow-right fa-fw"
-                                                ></i
-                                            ></span>
-                                            <span class="text-two"
-                                                >Get a quote now
-                                                <i
-                                                    class="fa-solid fa-arrow-right fa-fw"
-                                                ></i
-                                            ></span>
+                                            <nuxt-link to="/contact">
+                                                <span class="text-one"
+                                                    >Get a quote now
+                                                    <i
+                                                        class="fa-solid fa-arrow-right fa-fw"
+                                                    ></i
+                                                ></span>
+                                                <span class="text-two"
+                                                    >Get a quote now
+                                                    <i
+                                                        class="fa-solid fa-arrow-right fa-fw"
+                                                    ></i
+                                                ></span>
+
+                                            </nuxt-link>
                                         </div>
                                     </a>
                                 </div>
@@ -289,7 +299,7 @@ const route = {
                     <!-- Logo -->
                     <div class="logo">
                         <a href="index.html" title=""
-                            ><img src="images/logo-3.png" alt="" title=""
+                            ><img src="./../../public/images/logo-3.png" alt="" title=""
                         /></a>
                     </div>
 
@@ -304,7 +314,7 @@ const route = {
                         <div class="outer-box d-flex align-items-center">
                             <!-- Search Box -->
                             <div class="search-box">
-                                <form method="post" action="contact.html">
+                                <form method="post" action="">
                                     <div class="form-group">
                                         <input
                                             type="search"
@@ -391,7 +401,7 @@ const route = {
             <nav class="menu-box">
                 <div class="nav-logo">
 					<nuxt-link :to="route.home.url">
-						<img src="~/assets/images/logo.png" alt="" title=""/>
+						<img src="./../../public/images/logo.png" alt="" title=""/>
 					</nuxt-link>
                 
                 </div>

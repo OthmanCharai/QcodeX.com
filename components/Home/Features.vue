@@ -54,7 +54,7 @@ const features = [
     <section class="clients-one">
         <div
             class="clients-one_pattern"
-            style="background-image: url(images/background/3.jpg)"
+            style="background-image: url(./../../public/images/background/3.jpg)"
         ></div>
         <div class="auto-container">
             <div class="row clearfix">
@@ -73,8 +73,9 @@ const features = [
                     <!-- Sponsors Carousel -->
                     <ul class="sponsors-carousel-two owl-carousel owl-theme">
                         <Swiper
-                            :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                            :modules="modules"
                             :slides-per-view="3"
+                            :space-between="20"
                             :loop="true"
                             :effect="'creative'"
                             :autoplay="{
@@ -100,7 +101,7 @@ const features = [
                                     <figure class="client-one_image-box">
                                         <a href="#"
                                             ><img
-                                                src="images/clients/5.png"
+                                                src="./../../public/images/clients/5.png"
                                                 alt=""
                                         /></a>
                                     </figure>

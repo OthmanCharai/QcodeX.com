@@ -10,6 +10,9 @@ export default defineNuxtConfig({
         "~/assets/css/style.css",
         "~/assets/css/responsive.css"
     ],
-    modules: ['nuxt-swiper']
+    modules: ['nuxt-swiper',"@formkit/nuxt"],
+    formkit: {
+        configFile: './formkit.config.ts',
+      },
   
 });

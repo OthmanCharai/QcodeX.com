@@ -42,7 +42,7 @@ const services = [
     <section class="services-one">
         <div
             class="services-one_pattern-layer"
-            style="background-image: url(images/background/pattern-14.png)"
+            style="background-image: url(./../../public/images/background/pattern-14.png)"
         ></div>
         <div class="auto-container">
             <!-- Sec Title -->
@@ -57,8 +57,10 @@ const services = [
             <div class="services-one_inner-coontainer">
                 <div class="four-item-carousel owl-carousel owl-theme">
                     <Swiper
-                        :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                        :slides-per-view="2"
+                        :modules="modules"
+                        :slides-per-view="3"
+                        :space-between="50"
+                        :scrollbar="{ draggable: true }"
                         :loop="true"
                         :effect="'creative'"
                         :autoplay="{

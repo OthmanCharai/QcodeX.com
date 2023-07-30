@@ -21,7 +21,7 @@
                                     <div class="logo">
                                         <a href="index.html"
                                             ><img
-                                                src="images/footer-logo.png"
+                                                src="./../../public/images/footer-logo.png"
                                                 alt=""
                                         /></a>
                                     </div>
@@ -51,7 +51,7 @@
                                     <div class="email-box">
                                         <form
                                             method="post"
-                                            action="contact.html"
+                                            action="/contact"
                                         >
                                             <div class="form-group">
                                                 <input
@@ -149,7 +149,7 @@
                                                     class="lightbox-image"
                                                     href="images/gallery/project-1.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-1.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-1.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
@@ -157,9 +157,9 @@
                                             <figure class="image-box">
                                                 <a
                                                     class="lightbox-image"
-                                                    href="images/gallery/project-2.jpg"
+                                                    href="./../../public/images/gallery/project-2.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-2.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-2.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
@@ -167,9 +167,9 @@
                                             <figure class="image-box">
                                                 <a
                                                     class="lightbox-image"
-                                                    href="images/gallery/project-3.jpg"
+                                                    href="./../../public/images/gallery/project-3.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-3.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-3.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
@@ -177,9 +177,9 @@
                                             <figure class="image-box">
                                                 <a
                                                     class="lightbox-image"
-                                                    href="images/gallery/project-4.jpg"
+                                                    href="./../../public/images/gallery/project-4.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-4.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-4.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
@@ -187,9 +187,9 @@
                                             <figure class="image-box">
                                                 <a
                                                     class="lightbox-image"
-                                                    href="images/gallery/project-5.jpg"
+                                                    href="./../../public/images/gallery/project-5.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-5.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-5.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
@@ -197,9 +197,9 @@
                                             <figure class="image-box">
                                                 <a
                                                     class="lightbox-image"
-                                                    href="images/gallery/project-6.jpg"
+                                                    href="./../../public/images/gallery/project-6.jpg"
                                                     ><img
-                                                        src="images/gallery/footer-gallery-thumb-6.jpg"
+                                                        src="./../../public/images/gallery/footer-gallery-thumb-6.jpg"
                                                         alt=""
                                                 /></a>
                                             </figure>
