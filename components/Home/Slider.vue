@@ -4,33 +4,29 @@
  */
 const sliders = [
   {
-    mainImage: "background-image:url(./../../public/images/main-slider/2.jpg)",
+    mainImage: "background-image:url(./../../images/main-slider/2.jpg)",
     patternImage:
-      "background-image:url(./../../public/images/main-slider/pattern-1.png)",
+      "background-image:url(./../../images/main-slider/pattern-1.png)",
     title: "We are Business Solution",
-    head: "Prosper in this volatile <br />market funding.",
-    description:
-      "We place you at the centre of international networks to <br /> advance your strategic interests",
+    head: "UNLEASH THE FULL POTENTIAL OF YOUR COMPANY",
+
     link: "Contact one of our experts",
   },
   {
-    mainImage: "background-image:url(./../../public/images/main-slider/2.jpg)",
+    mainImage: "background-image:url(./../../images/main-slider/2.jpg)",
     patternImage:
-      "background-image:url(./../../public/images/main-slider/pattern-1.png)",
+      "background-image:url(./../../images/main-slider/pattern-1.png)",
     title: "We are Business Solution",
-    head: "Prosper in this volatile <br />market funding.",
-    description:
-      "We place you at the centre of international networks to <br /> advance your strategic interests",
+    head: "UNLEASH THE FULL POTENTIAL  OF YOUR COMPANY",
+
     link: "Contact one of our experts",
   },
   {
-    mainImage: "background-image:url(./../../public/images/main-slider/2.jpg)",
+    mainImage: "background-image:url(./../../images/main-slider/2.jpg)",
     patternImage:
-      "background-image:url(./../../public/images/main-slider/pattern-1.png)",
+      "background-image:url(./../../images/main-slider/pattern-1.png)",
     title: "We are Business Solution",
-    head: "Prosper in this volatile <br />market funding.",
-    description:
-      "We place you at the centre of international networks to <br /> advance your strategic interests",
+    head: "UNLEASH THE FULL POTENTIAL OF YOUR COMPANY",
     link: "Contact one of our experts",
   },
 ];
@@ -40,12 +36,12 @@ const sliders = [
  */
 const mainSlider = ref(null);
 const onSlideChange = () => {
-    mainSlider.value.classList.add("active");
+  mainSlider.value.classList.add("active");
 };
 
-const onSlideBeforeChanges=()=>{
+const onSlideBeforeChanges = () => {
   mainSlider.value.classList.remove("active");
-}
+};
 </script>
 
 <template>
@@ -88,7 +84,6 @@ const onSlideBeforeChanges=()=>{
                   {{ slider.title }}
                 </div>
                 <h1 v-html="slider.head" class="slider-two_heading"></h1>
-                <div v-html="slider.description" class="slider-two_text"></div>
                 <!-- Button Box -->
                 <div class="slider-two_button-box">
                   <a class="btn-style-two theme-btn btn-item" href="#">
@@ -102,7 +97,6 @@ const onSlideBeforeChanges=()=>{
                           >{{ slider.link }}
                           <i class="fa-solid fa-arrow-right fa-fw"></i
                         ></span>
-
                       </nuxt-link>
                     </div>
                   </a>

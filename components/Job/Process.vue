@@ -28,10 +28,7 @@
               <div class="process-one_block">
                 <div class="process-one_block-inner">
                   <div class="process-one_image">
-                    <img
-                      src="././../../public/images/resource/process-1.png"
-                      alt=""
-                    />
+                    <img src="././../../images/resource/process-1.png" alt="" />
                   </div>
                   <div class="process-one_year" :class="slider.color">
                     {{ slider.year }}

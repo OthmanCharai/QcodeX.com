@@ -73,10 +73,7 @@
         <div class="about-one_image-column-two col-lg-6 col-md-12 col-sm-12">
           <div class="about-one-image-inner-two">
             <div class="about-cicle_layer-two">
-              <img
-                src="./../../public/images/background/pattern-45.png"
-                alt=""
-              />
+              <img src="./../../images/background/pattern-45.png" alt="" />
             </div>
             <div class="about-one_image-two">
               <!-- Counter Column -->
@@ -84,7 +81,7 @@
                 <div
                   class="dots-layer"
                   style="
-                    background-image: url(./../../public/images/icons/about-dots.png);
+                    background-image: url(./../../images/icons/about-dots.png);
                   "
                 ></div>
                 <div class="about-one_counter-number">
@@ -95,11 +92,11 @@
                   experiences
                 </div>
               </div>
-              <img src="./../../public/images/resource/about-4.jpg" alt="" />
+              <img src="./../../images/resource/about-4.jpg" alt="" />
               <div class="about-one_award">
                 <div class="about-one_award-inner">
                   <div class="about-one_award-icon">
-                    <img src="./../../public/images/icons/award.png" alt="" />
+                    <img src="./../../images/icons/award.png" alt="" />
                   </div>
                   <strong>Best Awarded Company</strong>
                   We adapt our delivery to the way your work, whether as an
@@ -126,7 +123,7 @@ const tabs = [
   {
     id: "prod-mission",
     title: "Our Mission",
-    content:  props.about.mission,
+    content: props.about.mission,
   },
   {
     id: "prod-vision",
@@ -136,7 +133,7 @@ const tabs = [
   {
     id: "prod-value",
     title: "Our Value",
-    content: props.about.value
+    content: props.about.value,
   },
 ];
 

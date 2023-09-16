@@ -2,13 +2,11 @@
   <!-- Testimonial Section -->
   <section
     class="testimonial-section"
-    style="background-image: url(./../../public/images/background/5.jpg)"
+    style="background-image: url(./../../mages/background/5.jpg)"
   >
     <div
       class="pattern-layer-one"
-      style="
-        background-image: url(./../../public/images/background/pattern-25.png);
-      "
+      style="background-image: url(./../../mages/background/pattern-25.png)"
     ></div>
     <div class="auto-container">
       <div class="row clearfix">
@@ -27,14 +25,17 @@
                 <span>customers</span> have said.
               </h2>
               <div class="sec-title_two-text">
-                Simplified IT is designed to help make sure you and your data is
-                protected and your computer runs it's best. The network Access
-                provides is valuable.
+                Discover how our data solutions have made a difference for
+                businesses. Read client reviews showcasing real-world impact and
+                success
               </div>
             </div>
             <!-- Button Box -->
             <div class="button-box">
-              <nuxt-link class="btn-style-three theme-btn btn-item" to="/contact">
+              <nuxt-link
+                class="btn-style-three theme-btn btn-item"
+                to="/contact"
+              >
                 <div class="btn-wrap">
                   <span class="text-one"
                     >View More <i class="fa-solid fa-arrow-right fa-fw"></i
@@ -45,6 +46,7 @@
                 </div>
               </nuxt-link>
             </div>
+           
           </div>
         </div>
 
@@ -53,21 +55,21 @@
           <div
             class="inner-column"
             style="
-              background-image: url(./../../public/images/background/pattern-26.png);
+              background-image: url(./../../mages/background/pattern-26.png);
             "
           >
             <div class="authors-outer">
               <div class="author-one">
-                <img src="./../../public/images/resource/author-2.jpg" alt="" />
+                <img src="./../../images/resource/author-2.jpg" alt="" />
               </div>
               <div class="author-two">
-                <img src="./../../public/images/resource/author-3.jpg" alt="" />
+                <img src="./../../images/resource/author-3.jpg" alt="" />
               </div>
               <div class="author-three">
-                <img src="./../../public/images/resource/author-4.jpg" alt="" />
+                <img src="./../../images/resource/author-4.jpg" alt="" />
               </div>
               <div class="author-four">
-                <img src="./../../public/images/resource/author-5.jpg" alt="" />
+                <img src="./../../images/resource/author-5.jpg" alt="" />
               </div>
             </div>
             <div class="single-item-carousel owl-carousel owl-theme">
@@ -117,33 +119,28 @@
       </div>
     </div>
   </section>
+  
   <!-- End Testimonial Section -->
 </template>
 <script setup>
 const reviews = [
   {
-    text: "“I To helped the client achieve their goal of calling theattention of mobile network operators. The expert team wasalso able to develop an app with commendable UI/UX. Theclient appreciates their flexibility in terms.”",
-    name: "Othman CHARAI",
+    text: "“The data strategies implemented have revolutionized our efficiency. The seamless integration and insightful analytics have exceeded our expectations.”",
+    name: "Alten Group",
     post: "Senior Developer",
-    image: "./../../public/images/resource/author-1.jpg",
+    image: "./../../images/indestry/alten.png",
   },
   {
-    text: "“I To helped the client achieve their goal of calling theattention of mobile network operators. The expert team wasalso able to develop an app with commendable UI/UX. Theclient appreciates their flexibility in terms.”",
-    name: "Othman CHARAI",
+    text: "“The data strategies implemented have revolutionized our efficiency. The seamless integration and insightful analytics have exceeded our expectations.”",
+    name: "KG Consulting",
     post: "Senior Developer",
-    image: "./../../public/images/resource/author-1.jpg",
+    image: "./../../images/resource/download.jpeg",
   },
   {
-    text: "“I To helped the client achieve their goal of calling theattention of mobile network operators. The expert team wasalso able to develop an app with commendable UI/UX. Theclient appreciates their flexibility in terms.”",
-    name: "Othman CHARAI",
+    text: "“Exceptional data services transformed our operations, enabling precise decisions. The team's insights and support have been invaluable for our growth.”",
+    name: "Multitransporte GMBH",
     post: "Senior Developer",
-    image: "./../../public/images/resource/author-1.jpg",
-  },
-  {
-    text: "“I To helped the client achieve their goal of calling theattention of mobile network operators. The expert team wasalso able to develop an app with commendable UI/UX. Theclient appreciates their flexibility in terms.”",
-    name: "Othman CHARAI",
-    post: "Senior Developer",
-    image: "./../../public/images/resource/author-1.jpg",
+    image: "./../../images/resource/gmbh.jpeg",
   },
 ];
 </script>

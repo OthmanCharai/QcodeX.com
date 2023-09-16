@@ -1,10 +1,42 @@
-<script setup></script>
+<script setup>
+import axios from "axios";
+
+const fullName = ref("");
+const phoneNumber = ref("");
+const subject = ref("");
+const email = ref("");
+const message = ref("");
+
+// Contact Us
+
+const contactUs = () => {
+  
+  const userData = {
+    email: email.value,
+    fullName: fullName.value,
+    phoneNumber: phoneNumber.value,
+    message: message.value,
+    subject: subject.value,
+    to: "othman.fiver@gmail.com",
+    type: "contact",
+  };
+
+  axios
+    .post("https://qcodex.com/api/email.php", JSON.stringify(userData))
+    .then((response) => {
+      console.log("Email sent successfully", response.data);
+    })
+    .catch((error) => {
+      console.error("Email sending failed", error);
+    });
+};
+</script>
 
 <template lang="">
   <!-- Contact One -->
   <section
     class="contact-one"
-    style="background-image: url(./../../public/images/background/map-1.png)"
+    style="background-image: url(./../../ages/background/map-1.png)"
   >
     <div class="auto-container">
       <!-- Sec Title -->
@@ -35,7 +67,7 @@
             <div class="contact-block">
               <div class="block-inner">
                 <span class="icon"
-                  ><img src="./../../public/images/icons/contact-1.png" alt=""
+                  ><img src="./../../images/icons/contact-1.png" alt=""
                 /></span>
                 <strong>Office address</strong>
                 Digital Agency Network 20 Eastbourne Terrace London W2 6LG
@@ -46,11 +78,11 @@
             <div class="contact-block">
               <div class="block-inner">
                 <span class="icon"
-                  ><img src="./../../public/images/icons/contact-2.png" alt=""
+                  ><img src="./../../images/icons/contact-2.png" alt=""
                 /></span>
                 <strong>Telephone number</strong>
-                (408) 389-5470 <br />
-                (408) 456-5470
+                +1 (646) 769-0913 <br />
+                +1 (646) 769-0913
               </div>
             </div>
 
@@ -58,11 +90,11 @@
             <div class="contact-block">
               <div class="block-inner">
                 <span class="icon"
-                  ><img src="./../../public/images/icons/contact-3.png" alt=""
+                  ><img src="./../../images/icons/contact-3.png" alt=""
                 /></span>
                 <strong>Mail address</strong>
-                help@envato.com <br />
-                help@support.com
+                contact@qcodex.coml <br />
+                contact@qcodex.coml
               </div>
             </div>
           </div>
@@ -73,7 +105,7 @@
           <div class="inner-column">
             <!-- Contact Form -->
             <div class="contact-form">
-              <form method="post" action="sendemail.php" id="contact-form">
+              <form method="post" @submit.prevent="contactUs" id="contact-form">
                 <div class="row clearfix">
                   <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                     <label>Name (required)</label>
@@ -82,6 +114,7 @@
                       name="username"
                       placeholder="Your name*"
                       required=""
+                      v-model="fullName"
                     />
                   </div>
 
@@ -91,6 +124,7 @@
                       type="text"
                       name="email"
                       placeholder="Email"
+                      v-model="email"
                       required=""
                     />
                   </div>
@@ -100,6 +134,7 @@
                     <input
                       type="text"
                       name="phone"
+                      v-model="phoneNumber"
                       placeholder="Phone"
                       required=""
                     />
@@ -111,6 +146,7 @@
                       type="text"
                       name="subject"
                       placeholder="Subject"
+                      v-model="subject"
                       required=""
                     />
                   </div>
@@ -120,12 +156,16 @@
                     <textarea
                       class=""
                       name="message"
+                      v-model="message"
                       placeholder="Your text here..."
                     ></textarea>
                   </div>
 
                   <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                    <button class="btn-style-seven theme-btn">
+                    <button
+                      @click="contactUs"
+                      class="btn-style-seven theme-btn"
+                    >
                       <span class="btn-wrap">
                         <span class="text-one">Send message</span>
                         <span class="text-two">Send message</span>

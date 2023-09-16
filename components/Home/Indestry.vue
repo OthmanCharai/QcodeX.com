@@ -3,9 +3,7 @@
   <section class="choose-one">
     <div
       class="choose-one_pattern-layer"
-      style="
-        background-image: url(./../../public/images/background/pattern-19.png);
-      "
+      style="background-image: url(./../../ages/background/pattern-19.png)"
     ></div>
     <div class="auto-container">
       <!-- Sec Title -->
@@ -13,7 +11,7 @@
         <div class="sec-title_two-title">~ Why choose Us? ~</div>
         <h2 class="sec-title_two-heading">
           We serve a wide <span>variety</span> <br />
-          of industries
+          of Business Lines
         </h2>
       </div>
 
@@ -99,33 +97,51 @@
   <!-- End Choose One -->
 </template>
 <script setup>
-const activeTab = ref("prod-mission"); // Set the initial active tab
+const activeTab = ref("prod-sales-forces"); // Set the initial active tab
 
 const tabs = [
   {
-    id: "prod-mission",
-    title: "Company Mission",
-    image: "./../../public/images/resource/choose.jpg",
-    heading: "Fingent's Four Pillars of Influence",
-    text: "We believe in four pillars of influence that drive our growth. This is ingrained in everything we do We use technology to create a better and smarter environment.",
+    id: "prod-sales-forces",
+    title: "Sales Force",
+    image: "./../../images/indestry/sales-force.png",
+    heading: "BI for sales departments",
+    text: "Data-driven sales organizations are 23% more profitable than their counterparts who do not use data in their decision-making processes. “Source: McKinsey & Company”",
     link: "#",
     btnText: "Contact Us",
   },
   {
-    id: "prod-winner",
-    title: "Awards Winner",
-    image: "./../../public/images/resource/choose.jpg",
-    heading: "Fingent's Four Pillars of Influence",
-    text: "We believe in four pillars of influence that drive our growth. This is ingrained in everything we do We use technology to create a better and smarter environment.",
+    id: "prod-finance",
+    title: "Finance",
+    image: "./../../images/indestry/finance.png",
+    heading: "BI for Financial control",
+    text: "Refine data collection to elevate your strategic insightsIn a recent survey, 74% of CFOs stated that leveraging Business Intelligence tools is crucial for forecasting and strategic planning in today's complex financial landscape. “Source: Gartner Research”",
     link: "#", // Replace with the link URL for this tab
     btnText: "Contact Us",
   },
   {
-    id: "prod-software",
-    title: "Using Softwares",
-    image: "./../../public/images/resource/choose.jpg",
-    heading: "Fingent's Four Pillars of Influence",
-    text: "We believe in four pillars of influence that drive our growth. This is ingrained in everything we do We use technology to create a better and smarter environment.",
+    id: "prod-supply",
+    title: "Supply Chain",
+    image: "./../../images/indestry/supply-chain.png",
+    heading: "BI for the supply chain",
+    text: "Enhance your value chain by harnessing the power of data78% of supply chain leaders believe that implementing Business Intelligence tools will be the cornerstone of creating more resilient and adaptive supply chains in the next five years. “Source: Deloitte Supply Chain Survey”",
+    link: "#", // Replace with the link URL for this tab
+    btnText: "Contact Us",
+  },
+  {
+    id: "prod-marketing",
+    title: "Marketing",
+    image: "./../../images/indestry/marketing.png",
+    heading: "BI for marketing departments",
+    text: "Deeply understand your audience down to the finest nuances68% of marketing leaders affirm that utilizing Business Intelligence tools is pivotal in crafting more personalized and impactful customer experiences. “Source: HubSpot Marketing Statistics”",
+    link: "#", // Replace with the link URL for this tab
+    btnText: "Contact Us",
+  },
+  {
+    id: "prod-humain-resources",
+    title: "Human Resources",
+    image: "./../../images/indestry/humain-ressource.png",
+    heading: "BI for human resources",
+    text: "Harness the full potential of your HR data to drive insightsOver 50% of HR professionals believe that utilizing Business Intelligence tools is key to fostering a more engaged and productive workforce. “Source: Human Capital Institute (HCI) Annual Report”",
     link: "#", // Replace with the link URL for this tab
     btnText: "Contact Us",
   },
