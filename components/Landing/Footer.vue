@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+
+
+</script>
 
 <template>
   <!-- Footer -->
@@ -11,21 +14,21 @@
       <div class="widgets-section">
         <div class="row clearfix">
           <!-- Big Column -->
-          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+          <div class="big-column col-lg-10 col-md-12 col-sm-12">
             <div class="row clearfix">
               <!-- Footer Column -->
               <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                 <div class="footer-widget logo-widget">
                   <div class="logo">
-                    <a href="index.html"
-                      ><img src="./../../images/footer-logo.png" alt=""
-                    /></a>
+                    <nuxt-link to="/" 
+                      ><img style="width:170px;height:60px;background-size:contain;" src="./../../images/logo.jpeg" alt=""
+                    /></nuxt-link>
                   </div>
                   <div class="text">
                     We work with a passion of taking challenges and creating new
                     ones in Data sector.
                   </div>
-                  <a href="#" class="theme-btn about-btn">About us</a>
+                  <nuxt-link href="#" class="theme-btn about-btn" style="border-radius: 10px;">Contact Us</nuxt-link>
                 </div>
               </div>
 
@@ -91,21 +94,21 @@
           </div>
 
           <!-- Big Column -->
-          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+          <div class="big-column col-lg-2 col-md-12 col-sm-12">
             <div class="row clearfix">
               <!-- Footer Column -->
-              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+              <div class="footer-column col-lg-12 col-md-12 col-sm-12">
                 <div class="footer-widget contact-widget">
                   <h4>Official info:</h4>
                   <ul class="contact-list">
                     <li>
                       <span class="icon fa fa-phone"></span>
                       30 Commercial Road <br />
-                      Fratton, Australia
+                      USA
                     </li>
                     <li>
                       <span class="icon fa fa-envelope"></span>
-                      1-888-452-1505
+                      +1(646)667-9097
                     </li>
                   </ul>
                   <div class="timing">
@@ -116,76 +119,7 @@
                 </div>
               </div>
 
-              <!-- Footer Column -->
-              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                <div class="footer-widget instagram-widget">
-                  <h4>Gallery</h4>
-                  <div class="widget-content">
-                    <div class="images-outer clearfix">
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="images/gallery/project-1.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-1.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="./../../images/gallery/project-2.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-2.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="./../../images/gallery/project-3.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-3.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="./../../images/gallery/project-4.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-4.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="./../../images/gallery/project-5.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-5.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                      <!--Image Box-->
-                      <figure class="image-box">
-                        <a
-                          class="lightbox-image"
-                          href="./../../images/gallery/project-6.jpg"
-                          ><img
-                            src="./../../images/gallery/footer-gallery-thumb-6.jpg"
-                            alt=""
-                        /></a>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -194,7 +128,7 @@
       <div class="footer-bottom">
         <div class="copyright">
           2023 &copy; All rights reserved by
-          <a href="#">Themexriver</a>
+          <a href="#">Qcodex</a>
         </div>
       </div>
     </div>

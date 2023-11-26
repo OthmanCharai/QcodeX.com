@@ -19,12 +19,7 @@
           <div class="about-two_image">
             <img src="./../../images/indestry/whyUs.png" alt="" />
             <!-- About One Detail -->
-            <a
-              class="about-two_play lightbox-video fa-solid fa-play fa-fw"
-              href="#"
-            >
-              <i class="ripple"></i>
-            </a>
+           
           </div>
         </div>
 

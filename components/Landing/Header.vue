@@ -3,7 +3,7 @@
  * Contact object
  */
 const contact = {
-  phone: "+1(646)667-9097​",
+  phone: "+1(646)667-9097",
   email: "contact@qcodex.com",
   address: "380 Albert St, Melbourne, Australia",
   linkedin: "https://www.linkedin.com/",
@@ -30,7 +30,55 @@ services.forEach((element) => {
   servicesHeader.push(element.name);
 });
 
-const mobile = ref(false);
+const isMobileToggled=ref(false);
+
+
+const toggleMobile=()=>{
+  isMobileToggled.value=!isMobileToggled.value
+
+  // Access the body element
+  const body = document.body;
+
+  if (isMobileToggled.value) {
+        body.classList.add('mobile-menu-visible');
+      } else {
+        body.classList.remove('mobile-menu-visible');
+      }
+}
+
+const toggleDropdown = () => {
+  const dropdownBtns = document.querySelectorAll('.mobile-menu .navigation > li.dropdown > .dropdown-btn');
+
+  dropdownBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = btn.parentElement.querySelector('ul');
+
+      if (target.style.display === 'block') {
+        btn.parentElement.classList.remove('open');
+        target.style.display = 'none';
+        const navigation = btn.closest('.navigation');
+        navigation.querySelectorAll('li.dropdown').forEach((li) => {
+          li.classList.remove('open');
+          li.querySelector('ul').style.display = 'none';
+        });
+      } else {
+        const navigation = btn.closest('.navigation');
+        
+        navigation.querySelectorAll('li.dropdown').forEach((li) => {
+          li.classList.remove('open');
+          li.querySelector('ul').style.display = 'none';
+        });
+        btn.parentElement.classList.toggle('open');
+        target.style.display = 'block';
+      }
+    });
+  });
+};
+
+onMounted(() => {
+  toggleDropdown();
+});
 </script>
 
 <template lang="">
@@ -95,7 +143,7 @@ const mobile = ref(false);
           <!-- Logo Box -->
           <div class="logo">
             <nuxt-link :to="route.home.url">
-              <img src="./../../images/logo-3.png" alt="" title="" />
+              <img style="height: 60px;" src="./../../images/logo.jpeg" alt="" title="" />
             </nuxt-link>
           </div>
 
@@ -143,52 +191,12 @@ const mobile = ref(false);
                         </li>
                       </ul>
                     </li>
-                    <!--  <li class="dropdown">
-                                            <a href="#">Project</a>
-                                            <ul>
-                                                <li>
-                                                    <a href="project.html"
-                                                        >project</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        href="project-detail.html"
-                                                        >project Detail</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#">Blog</a>
-                                            <ul>
-                                                <li>
-                                                    <a href="blog.html"
-                                                        >Our Blog</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="blog-detail.html"
-                                                        >Blog Detail</a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="not-found.html"
-                                                        >Not Found</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li> -->
-                    
                   </ul>
                 </div>
               </nav>
               <!-- Main Menu End-->
 
-              <div
-                @click="mobile = !mobile"
-                class="outer-box d-flex align-items-center"
-              >
+              <div class="outer-box d-flex align-items-center">
                 <!-- Search Box -->
                 <div class="search-box">
                   <form method="post" action="">
@@ -246,7 +254,7 @@ const mobile = ref(false);
                 </div>
 
                 <!-- Mobile Navigation Toggler -->
-                <div class="mobile-nav-toggler">
+                <div @click="toggleMobile()" class="mobile-nav-toggler">
                   <span class="icon fa-solid fa-bars fa-fw"></span>
                 </div>
               </div>
@@ -263,7 +271,7 @@ const mobile = ref(false);
           <!-- Logo -->
           <div class="logo">
             <a href="index.html" title=""
-              ><img src="./../../images/logo-3.png" alt="" title=""
+              ><img src="./../../images/logo.jpeg" alt="" title=""
             /></a>
           </div>
 
@@ -331,7 +339,7 @@ const mobile = ref(false);
               </div>
 
               <!-- Mobile Navigation Toggler -->
-              <div class="mobile-nav-toggler">
+              <div @click="toggleMobile()" class="mobile-nav-toggler">
                 <span class="icon fa-solid fa-bars fa-fw"></span>
               </div>
             </div>
@@ -342,16 +350,14 @@ const mobile = ref(false);
     <!-- End Sticky Menu -->
 
     <!-- Mobile Menu  -->
-    <div class="mobile-menu" :class="{ visible: mobile }">
-      <div class="menu-backdrop"></div>
-      <div class="close-btn">
+    <div class="mobile-menu">
+      <div class="menu-backdrop" style="background: rgb(0 0 0 / 20%);"></div>
+      <div @click="toggleMobile()" class="close-btn">
         <span class="icon flaticon-020-x-mark"></span>
       </div>
       <nav class="menu-box">
         <div class="nav-logo">
-          <nuxt-link :to="route.home.url">
-            <img src="./../../images/logo.png" alt="" title="" />
-          </nuxt-link>
+          <nuxt-link to="/"><img src="./../../images/logo.jpeg" alt="" title="" /></nuxt-link>
         </div>
         <!-- Search -->
         <div class="search-box">
@@ -362,7 +368,7 @@ const mobile = ref(false);
                 name="search-field"
                 value=""
                 placeholder="SEARCH HERE"
-                required
+                required=""
               />
               <button type="submit">
                 <span class="icon flaticon-001-loupe"></span>
@@ -372,6 +378,46 @@ const mobile = ref(false);
         </div>
         <div class="menu-outer">
           <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          <div class="navbar-header">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div
+            class="navbar-collapse collapse clearfix"
+            id="navbarSupportedContent"
+          >
+            <ul class="navigation clearfix">
+              <li>
+                <nuxt-link to="/">Home</nuxt-link>
+              </li>
+              <li class="dropdown">
+                <a href="#">Services</a>
+                <ul style="display:none">
+                  <li v-for="service in servicesHeader">
+                    <nuxt-link :to="`/jobs/${service}`">
+                      {{ service }}
+                    </nuxt-link>
+                  </li>
+                </ul>
+                <div class="dropdown-btn">
+                  <span class="fa-solid fa-chevron-down fa-fw"></span>
+                </div>
+              </li>
+              <li><nuxt-link to="contact">Contact</nuxt-link></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
@@ -381,7 +427,7 @@ const mobile = ref(false);
 </template>
 
 <style lang="css">
-.visible{
+.visible {
   visibility: focus-visible;
 }
 </style>

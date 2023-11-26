@@ -2,11 +2,11 @@
   <!-- Testimonial Section -->
   <section
     class="testimonial-section"
-    style="background-image: url(./../../mages/background/5.jpg)"
+    
   >
     <div
       class="pattern-layer-one"
-      style="background-image: url(./../../mages/background/pattern-25.png)"
+     
     ></div>
     <div class="auto-container">
       <div class="row clearfix">
@@ -19,7 +19,7 @@
           >
             <!-- Sec Title -->
             <div class="sec-title_two">
-              <div class="sec-title_two-title">Testimonials ~</div>
+              <div class="sec-title_two-title">Reviews ~</div>
               <h2 class="sec-title_two-heading">
                 Here's what our <br />
                 <span>customers</span> have said.
@@ -54,24 +54,9 @@
         <div class="carousel-column col-lg-7 col-md-12 col-sm-12">
           <div
             class="inner-column"
-            style="
-              background-image: url(./../../mages/background/pattern-26.png);
-            "
+          
           >
-            <div class="authors-outer">
-              <div class="author-one">
-                <img src="./../../images/resource/author-2.jpg" alt="" />
-              </div>
-              <div class="author-two">
-                <img src="./../../images/resource/author-3.jpg" alt="" />
-              </div>
-              <div class="author-three">
-                <img src="./../../images/resource/author-4.jpg" alt="" />
-              </div>
-              <div class="author-four">
-                <img src="./../../images/resource/author-5.jpg" alt="" />
-              </div>
-            </div>
+           
             <div class="single-item-carousel owl-carousel owl-theme">
               <Swiper
                 :modules="[SwiperAutoplay, SwiperEffectCreative]"

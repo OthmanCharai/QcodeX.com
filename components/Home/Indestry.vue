@@ -50,10 +50,7 @@
                   class="choose-one_image-column col-lg-6 col-md-12 col-sm-12"
                 >
                   <div class="choose-one_image-inner">
-                    <div
-                      class="choose-one_dotted-layer"
-                      :style="{ backgroundImage: `url(${tab.image})` }"
-                    ></div>
+                  
                     <div class="choose-one_color-layer"></div>
                     <div class="choose-one_image">
                       <img :src="tab.image" alt="" />

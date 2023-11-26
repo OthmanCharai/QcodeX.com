@@ -1156,6 +1156,7 @@ img{
 	text-transform: capitalize;
 	font-family:var(--font-family-Rubik);
 	background-color: var(--color-thirtyone);
+	border-radius: 10px;
 }
 
 .btn-style-two:before{
@@ -1174,9 +1175,7 @@ img{
 	background: var(--white-color);
 }
 
-.btn-style-two:hover:before{
-	top: 0%;
-}
+
 
 .btn-style-two .btn-wrap{
 	position:relative;
@@ -1195,11 +1194,6 @@ img{
 	-webkit-transition: all 0.3s ease;
 }
 
-.btn-style-two:hover .btn-wrap  .text-one:first-child{
-	-webkit-transform: translateY(-150%);
-    -ms-transform: translateY(-150%);
-    transform: translateY(-150%);
-}
 
 .btn-style-two .btn-wrap .text-two{
 	position: absolute;
@@ -1209,21 +1203,6 @@ img{
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
-
-.btn-style-two:hover .btn-wrap .text-two{
-	top: 50%;
-    -webkit-transform: translateY(-50%); 
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.btn-style-two:hover .btn-wrap .text-two{
-	color: var(--color-thirtythree);
-}
-
-.btn-style-two:hover .arrow{
-	
 }
 
 .btn-style-two i{
@@ -1243,14 +1222,6 @@ img{
 	font-family: 'Font Awesome 5 Pro';
 }
 
-.btn-style-two:hover{
-	
-}
-
-.btn-style-two:hover:before{
-	top: -40%;
-}
-
 /* Btn Style Three */
 
 .btn-style-three{
@@ -1265,6 +1236,7 @@ img{
 	text-transform: capitalize;
 	background: var(--color-thirtytwo);
 	font-family:var(--font-family-FiraSans);
+	border-radius: 10px;
     background: linear-gradient(to top left, var(--color-thirtythree) 0%, var(--color-thirtytwo) 100%);
 }
 
@@ -1284,9 +1256,7 @@ img{
 	background: var(--color-three)
 }
 
-.btn-style-three:hover:before{
-	top: 0%;
-}
+
 
 .btn-style-three .btn-wrap{
 	position:relative;
@@ -1305,11 +1275,7 @@ img{
 	-webkit-transition: all 0.3s ease;
 }
 
-.btn-style-three:hover .btn-wrap  .text-one:first-child{
-	-webkit-transform: translateY(-150%);
-    -ms-transform: translateY(-150%);
-    transform: translateY(-150%);
-}
+
 
 .btn-style-three .btn-wrap .text-two{
 	position: absolute;
@@ -1321,20 +1287,11 @@ img{
     transition: all 0.3s ease;
 }
 
-.btn-style-three:hover .btn-wrap .text-two{
-	top: 50%;
-    -webkit-transform: translateY(-50%); 
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
 
-.btn-style-three:hover .btn-wrap .text-two{
-	color: var(--white-color);
-}
 
-.btn-style-three:hover .arrow{
-	
-}
+
+
+
 
 .btn-style-three i{
 	font-style:normal;
@@ -1353,13 +1310,7 @@ img{
 	font-family: 'Font Awesome 5 Pro';
 }
 
-.btn-style-three:hover{
-	
-}
 
-.btn-style-three:hover:before{
-	top: -40%;
-}
 
 /* Btn Style Four */
 

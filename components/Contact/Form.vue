@@ -60,48 +60,8 @@ const contactUs = () => {
         </div>
       </div>
       <div class="row clearfix">
-        <!-- Info Column -->
-        <div class="info-column col-lg-4 col-md-12 col-sm-12">
-          <div class="inner-column">
-            <!-- Contact Block -->
-            <div class="contact-block">
-              <div class="block-inner">
-                <span class="icon"
-                  ><img src="./../../images/icons/contact-1.png" alt=""
-                /></span>
-                <strong>Office address</strong>
-                Digital Agency Network 20 Eastbourne Terrace London W2 6LG
-              </div>
-            </div>
-
-            <!-- Contact Block -->
-            <div class="contact-block">
-              <div class="block-inner">
-                <span class="icon"
-                  ><img src="./../../images/icons/contact-2.png" alt=""
-                /></span>
-                <strong>Telephone number</strong>
-                +1 (646) 769-0913 <br />
-                +1 (646) 769-0913
-              </div>
-            </div>
-
-            <!-- Contact Block -->
-            <div class="contact-block">
-              <div class="block-inner">
-                <span class="icon"
-                  ><img src="./../../images/icons/contact-3.png" alt=""
-                /></span>
-                <strong>Mail address</strong>
-                contact@qcodex.coml <br />
-                contact@qcodex.coml
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form Column -->
-        <div class="form-column col-lg-8 col-md-12 col-sm-12">
+         <!-- Form Column -->
+         <div class="form-column col-lg-8 col-md-12 col-sm-12">
           <div class="inner-column">
             <!-- Contact Form -->
             <div class="contact-form">
@@ -178,6 +138,47 @@ const contactUs = () => {
             <!-- End Comment Form -->
           </div>
         </div>
+        <!-- Info Column -->
+        <div class="info-column col-lg-4 col-md-12 col-sm-12">
+          <div class="inner-column" style="margin-top:0px">
+            <!-- Contact Block -->
+            <div class="contact-block">
+              <div class="block-inner">
+                <span class="icon"
+                  ><img src="./../../images/icons/contact-1.png" alt=""
+                /></span>
+                <strong>Office address</strong>
+                Digital Agency Network 20 Eastbourne Terrace London W2 6LG
+              </div>
+            </div>
+
+            <!-- Contact Block -->
+            <div class="contact-block">
+              <div class="block-inner">
+                <span class="icon"
+                  ><img src="./../../images/icons/contact-2.png" alt=""
+                /></span>
+                <strong>Telephone number</strong>
+                +1(646)667-9097 <br />
+                +1(646)667-9097
+              </div>
+            </div>
+
+            <!-- Contact Block -->
+            <div class="contact-block">
+              <div class="block-inner">
+                <span class="icon"
+                  ><img src="./../../images/icons/contact-3.png" alt=""
+                /></span>
+                <strong>Mail address</strong>
+                contact@qcodex.com<br />
+                contact@qcodex.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
       </div>
     </div>
   </section>

@@ -33,9 +33,9 @@ const features = [
     <div class="auto-container">
       <div class="row clearfix">
         <!-- Feature Block One -->
-        <div v-for="feature in features" class="feature-block_one">
+        <div v-for="feature in features"  class="feature-block_one">
           <nuxt-link :to="`/jobs/${feature.title}`">
-            <div class="feature-block_one-inner max-height">
+            <div style="border-radius: 10px;" class="feature-block_one-inner max-height">
               <span class="color-layer"></span>
               <span class="feature-block_one-icon">
                 <img :src="feature.image" alt="" />

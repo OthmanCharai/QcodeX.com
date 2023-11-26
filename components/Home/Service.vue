@@ -1,41 +1,6 @@
 <script setup>
-const services = [
-  {
-    image: "./../../images/icons/document.png",
-    title: "Data Consulting",
-    link: "/",
-    description:
-      "Expert guidance navigating data complexities for informed decisions.",
-  },
-  {
-    image: "./../../images/icons/home.png",
-    title: "Architecture & Cloud",
-    link: "/",
-    description:
-      "Architecting digital landscapes and harnessing limitless cloud potential for optimized operations.",
-  },
-  {
-    image: "./../../images/icons/coaching.png",
-    title: "Training",
-    link: "/",
-    description:
-      "Empowering with data expertise through targeted training programs.",
-  },
-  {
-    image: "./../../images/icons/service-8.png",
-    title: "UI/UX Design",
-    link: "/",
-    description:
-      "Our customers get solutions and business opportunities instead of just projects.",
-  },
-  {
-    image: "./../../images/icons/service-8.png",
-    title: "UI/UX Design",
-    link: "/",
-    description:
-      "Our customers get solutions and business opportunities instead of just projects.",
-  },
-];
+import jsonData from "./../../assets/services.json";
+const services = jsonData.services;
 </script>
 <template lang="">
   <!-- Services One -->
@@ -76,6 +41,24 @@ const services = [
                 translate: ['100%', 0, 0],
               },
             }"
+            :breakpoints="{
+              '340': {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              '500': {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              '768': {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              '1024': {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }"
           >
             <SwiperSlide
               class="slide"
@@ -86,30 +69,32 @@ const services = [
               <div class="service-block_three">
                 <div class="service-block_three-inner">
                   <span class="service-block_three-icon"
-                    ><img :src="service.image" alt=""
+                    ><img style="width:55px;height:55px;margin-top:5px" :src="service.icon" alt=""
                   /></span>
                   <h5 class="service-block_three-heading">
-                    {{ service.title }}
+                    {{ service.name }}
                   </h5>
-                  <div class="service-block_three-text overlapping">
-                    {{ service.description }}
+                  <div
+                    style="
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    "
+                    class="service-block_three-text overlapping"
+                  >
+                    {{ service.content }}
                   </div>
                   <div class="service-block_three-overlay">
                     <div class="service-block_three-color-layer"></div>
                     <span class="service-block_three-icon-two"
-                      ><img :src="service.image" alt=""
+                      ><img style="width:55px;height:55px;margin-top:5px" :src="service.icon" alt=""
                     /></span>
 
                     <h5 class="service-block_three-heading alternate">
-                      <nuxt-link :to="service.link">{{
-                        service.title
+                      <nuxt-link :to="`/jobs/${service.name}`">{{
+                        service.name
                       }}</nuxt-link>
                     </h5>
-
-                    <nuxt-link class="service-block_three-learn" :to="service.link">{{
-                        service.title
-                      }}</nuxt-link>
-      
                   </div>
                 </div>
               </div>
@@ -122,7 +107,7 @@ const services = [
   <!-- End Services One -->
 </template>
 <style lang="css">
-.overlapping{
-  height:80px
+.overlapping {
+  height: 80px;
 }
 </style>
